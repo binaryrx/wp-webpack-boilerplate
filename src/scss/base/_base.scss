@@ -1,0 +1,29 @@
+@use "./vars" as *;
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  @media #{$mq-lg} {
+    font-size: calc(0.65em + 0.15vmin);
+    font-size: clamp(11px, 0.85vw, 30px);
+  }
+
+  @media #{$mq-sm} {
+    font-size: calc(0.9em + 0.5vmin);
+    font-size: clamp(8px, 2.5vw, 30px);
+  }
+}
+
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
